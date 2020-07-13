@@ -26,7 +26,10 @@
                                              hjust=0.2),
                    plot.subtitle=element_text(face="bold.italic",
                                               color ="brown", hjust=0.7),
-                   plot.title=element_text(hjust=0.8)) +
+                   plot.title=element_text(hjust=0.8),
+                   aspect.ratio = (3/4),
+                   #still working on 
+                   panel.background = element_rect(fill = "slategray4")) +
              scale_x_continuous(expand= c(0,1),
                                # n.breaks = 7,
                               #  breaks= 5,
