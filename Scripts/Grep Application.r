@@ -64,6 +64,17 @@
   tempValues2 = as.numeric(tempValues);
   #add to dataset
  classData2$tempValues2 = tempValues2;
+ #add column to convert to F
+ classData2$tempValuesF = ifelse(classData2$tempType == "Fahrenheit",
+                                 classData2$tempValues2,
+                                 (9/5)*classData2$tempValues2 + 32);
+ 
+ #add column to convert to C
+ 
+ classData2$tempValuesC = ifelse(classData2$tempType == "Fahrenheit",
+                                 (5/9)*(classData2$tempValues2-32),
+                                 classData2$tempValues2);
+ 
  #add column to convert to K
  classData2$tempValuesK = ifelse(classData2$tempType == "Fahrenheit",
                                  (5/9)*(classData2$tempValues2-32) + 273,
