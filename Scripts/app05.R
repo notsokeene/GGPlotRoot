@@ -93,12 +93,14 @@ Humidity = weatherData$relHum
 JanFebHum = vector(mode = "numeric",length = length(biMonth))
 for (i in 1:length(theDate))  #go through each date
 {
-if(biMonth[i] == "JanFeb")
-{
-  JanFebHum[i] = Humidity[i];
-}
-  else 
+  if(biMonth[i] == "JanFeb")
+  {
+    JanFebHum[i] = Humidity[i];
+  }
+  else
+  {
     JanFebHum[i] = "";
+  }
 }
 
 JanFebHum2 = as.numeric(JanFebHum);
