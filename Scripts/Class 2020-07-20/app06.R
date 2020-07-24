@@ -109,6 +109,9 @@ weatherData$precipType = "No Precipitation Days";
 weatherData$precipType[isRain] = "Precipitation Days";
 weatherData$precipType[isSnow] = "Precipitation Days";
 
+#Could also write instead of 109 and 110:
+#weatherData$precipType[union(isRain, isSnow)] = "Precipitation Days"
+
 #make the plot
 thePlot2 = ggplot(data=weatherData) +
   geom_boxplot(mapping=aes(x=precipType, y=relHum),

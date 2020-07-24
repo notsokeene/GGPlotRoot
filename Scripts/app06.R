@@ -73,6 +73,10 @@ lowPressureVals= which(weatherData$pressureLevel == "Low" &
 lowOutliersDates = weatherData[lowPressureVals,"dateYr"];
 lowOutliersSpeed = weatherData[lowPressureVals,"windSusSpeed"];
 
+#Or can write (works better with tibbles)
+# weatherData$dateYr[lowPressureVals]
+
+
 # Label the outliers for the lowest pressure level with the dats on the 
 # plot
 
